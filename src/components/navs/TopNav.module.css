@@ -1,0 +1,14 @@
+.topnav{
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth{
+    align-items: center;
+    padding-right: 10px;
+    display: flex;
+    gap: 10px;
+}
