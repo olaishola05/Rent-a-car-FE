@@ -8,11 +8,29 @@
 
 .sidenav, .homecontainer{
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
+    /* border: 1px solid red; */
 }
 
 .sidenav{
-    width: 13%;
+    width: 14%;
+}
+
+.socialmedia{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 5px 5px 5px;
+    margin-top: 280px;
+}
+
+.icons{
+    color: rgb(70, 70, 70);
+}
+
+.footer{
+    font-size: 13px;
 }
 
 .navlinks{
@@ -43,7 +61,10 @@
 }
 
 .homecontainer{
-    width: 87%;
+    width: 85%;
+    position: absolute;
+    top: 120px;
+    right: 0;
 }
 
 .info{
@@ -57,12 +78,14 @@
 .info h1{
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
 }
 
 .info span{
-    font-size: 20px;
+    font-size: 15px;
     font-style: italic;
     color: #BCBCBC;
+    text-align: center;
 }
 
 .imageContainer{
@@ -80,17 +103,23 @@ img{
     width: 90%;
     margin: 0 auto;
     padding: 20px;
-    box-shadow: none;
 }
 
 .BannerGrid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    border: 1px solid goldenrod;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
 }
 
 .slideItem{
+    width: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border: 1px solid red;
     padding: 10px;
 }
