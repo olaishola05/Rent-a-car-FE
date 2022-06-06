@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import { registerUserToApi } from '../../redux/reducers/userReducer';
 
 const Register = () => {
@@ -36,36 +34,46 @@ const Register = () => {
             )}
         </div>
       ) : ''}
-      <Form>
-        <Form.Group className="mb-3" controlId="formBasicname">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter name" onChange={onchange} name="name" />
-        </Form.Group>
+      <form>
+        <div className="mb-3">
+          <label htmlFor="name">
+            Name
+            <input type="text" placeholder="Enter name" onChange={onchange} id="name" name="name" />
+          </label>
+        </div>
 
-        <Form.Group className="mb-3" controlId="formBasicusername">
-          <Form.Label>username</Form.Label>
-          <Form.Control type="text" placeholder="Enter username" onChange={onchange} name="username" />
-        </Form.Group>
+        <div className="mb-3">
+          <label htmlFor="username">
+            username
+            <input type="text" placeholder="Enter username" onChange={onchange} id="username" name="username" />
+          </label>
+        </div>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" onChange={onchange} name="email" />
-        </Form.Group>
+        <div className="mb-3">
+          <label htmlFor="email">
+            Email address
+            <input type="email" placeholder="Enter email" onChange={onchange} id="email" name="email" />
+          </label>
+        </div>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" onChange={onchange} name="password" />
-        </Form.Group>
+        <div className="mb-3">
+          <label htmlFor="password">
+            Password
+            <input type="password" placeholder="Password" onChange={onchange} id="password" name="password" />
+          </label>
+        </div>
 
-        <Form.Group className="mb-3" controlId="formBasicPasswordConfirmation">
-          <Form.Label>Password confirmation</Form.Label>
-          <Form.Control type="password" placeholder="Password Confirmation" onChange={onchange} name="password_confirmation" />
-        </Form.Group>
+        <div className="mb-3">
+          <label htmlFor="password_confirmation">
+            Password confirmation
+            <input type="password" placeholder="Password Confirmation" onChange={onchange} id="password_confirmation" name="password_confirmation" />
+          </label>
+        </div>
 
-        <Button variant="primary" type="submit" onClick={handleSubmit}>
+        <button type="submit" onClick={handleSubmit}>
           Submit
-        </Button>
-      </Form>
+        </button>
+      </form>
 
     </div>
   );

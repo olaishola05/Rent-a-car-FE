@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+
 import { logUserToApi } from '../../redux/reducers/userReducer';
 
 const Login = () => {
@@ -35,22 +34,26 @@ const Login = () => {
             )}
         </div>
       ) : ''}
-      <Form>
+      <form>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" onChange={onchange} name="email" />
-        </Form.Group>
+        <div className="mb-3 form-control">
+          <label htmlFor="email">
+            Email address
+            <input type="email" placeholder="Enter email" onChange={onchange} id="email" name="email" />
+          </label>
+        </div>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" onChange={onchange} name="password" />
-        </Form.Group>
+        <div className="mb-3">
+          <label htmlFor="password">
+            Password
+            <input type="password" placeholder="Password" onChange={onchange} id="password" name="password" />
+          </label>
+        </div>
 
-        <Button variant="primary" type="submit" onClick={handleSubmit}>
+        <button type="submit" onClick={handleSubmit}>
           Submit
-        </Button>
-      </Form>
+        </button>
+      </form>
 
     </div>
   );

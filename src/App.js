@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import { Routes, Route } from 'react-router-dom';
-
+import TopNav from './components/navs/TopNav';
+import SideNav from './components/navs/SideNav';
 import './App.css';
 import Home from './components/Home';
 import Register from './components/forms/Register';
@@ -11,7 +12,8 @@ function App() {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
   return (
     <div className="App">
-
+      <TopNav />
+      <SideNav />
       <Routes>
         <Route exact path="/" element={<Home />} />
 
