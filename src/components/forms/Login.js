@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { logUserToApi } from '../../redux/actions/userActions';
+import { logUserToApi } from '../../redux/reducers/userReducer';
 
 const Login = () => {
   const [state, setState] = useState({});
+  const { error } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   const onchange = (e) => {
@@ -24,7 +25,16 @@ const Login = () => {
   return (
     <div>
       <h3>SIGN IN </h3>
-
+      {error ? (
+        <div>
+          {typeof error === 'string'
+            ? (<span>{error}</span>)
+            : (error.map((errorItem) => (
+              <span key={errorItem}>{errorItem}</span>
+            ))
+            )}
+        </div>
+      ) : ''}
       <Form>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">

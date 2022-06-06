@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { registerUserToApi } from '../../redux/actions/userActions';
+import { registerUserToApi } from '../../redux/reducers/userReducer';
 
 const Register = () => {
   const [state, setState] = useState({});
+  const { error } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   const onchange = (e) => {
@@ -23,8 +24,18 @@ const Register = () => {
 
   return (
     <div>
-      <h3>Register user</h3>
 
+      <h3>Register user</h3>
+      {error ? (
+        <div>
+          {typeof error === 'string'
+            ? (<span>{error}</span>)
+            : (error.map((errorItem) => (
+              <span key={errorItem}>{errorItem}</span>
+            ))
+            )}
+        </div>
+      ) : ''}
       <Form>
         <Form.Group className="mb-3" controlId="formBasicname">
           <Form.Label>Name</Form.Label>
