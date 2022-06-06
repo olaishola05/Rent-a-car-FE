@@ -1,18 +1,18 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #FFFFFF;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
 
-.App{
-    margin: 0;
-    padding: 0;
+.App {
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    width: 98%;
-    display: flex;
-    padding: 10px;
-    gap: 1px;
-    margin-top: 40px;
+.container {
+  width: 98%;
+  display: flex;
+  padding: 10px;
+  gap: 1px;
+  margin-top: 40px;
 }

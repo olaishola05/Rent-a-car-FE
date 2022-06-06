@@ -1,15 +1,15 @@
-.topnav{
-    width: 98%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 70px;
+.topnav {
+  width: 98%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
 }
 
-.auth{
-    align-items: center;
-    padding-right: 10px;
-    display: flex;
-    gap: 10px;
+.auth {
+  align-items: center;
+  padding-right: 10px;
+  display: flex;
+  gap: 10px;
 }
