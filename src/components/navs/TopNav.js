@@ -8,6 +8,7 @@ const TopNav = () => (
     <div className={styles.auth}>
       <Button variant="contained">Login</Button>
       <Button type="button">Register</Button>
+      <Button type="button">Log Out</Button>
     </div>
   </div>
 );
