@@ -4,9 +4,11 @@ import {
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import userReducer from './reducers/userReducer';
+import carsReducer from './reducers/cars/carsReducer';
 
 const rootReducer = combineReducers({
   user: userReducer,
+  cars: carsReducer,
 });
 
 const store = createStore(rootReducer, compose(applyMiddleware(logger, thunk)));
