@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import TopNav from './components/navs/TopNav';
 import SideNav from './components/navs/SideNav';
 import './App.css';
-import Home from './components/Home';
+import Home from './components/cars/Home';
 import Register from './components/forms/Register';
 import Login from './components/forms/Login';
 import Error from './components/Error';
