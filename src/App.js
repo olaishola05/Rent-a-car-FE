@@ -7,6 +7,7 @@ import Home from './components/cars/Home';
 import Register from './components/forms/Register';
 import Login from './components/forms/Login';
 import Error from './components/Error';
+import CarDetails from './components/cars/CarDetails';
 
 function App() {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -16,7 +17,7 @@ function App() {
       <SideNav />
       <Routes>
         <Route exact path="/" element={<Home />} />
-
+        <Route exact path="/cars/:id" element={<CarDetails />} />
         <Route path="/sign_up" element={<Register />} />
         <Route path="/sign_in" element={<Login />} />
         {isLoggedIn ? (
@@ -26,7 +27,9 @@ function App() {
             <Route path="/add-car" element="Add Car" />
             <Route path="/delete" element="Delete Car" />
           </>
-        ) : ''}
+        ) : (
+          ''
+        )}
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

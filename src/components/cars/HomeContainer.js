@@ -7,7 +7,7 @@ const HomeContainer = () => {
   const navigate = useNavigate();
 
   const handleNavigation = (id) => {
-    navigate(`/display/${id}`);
+    navigate(`/cars/${id}`);
   };
 
   return (

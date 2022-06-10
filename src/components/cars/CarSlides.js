@@ -33,8 +33,9 @@ function CarSlides({ navigate }) {
       carLists.push(
         <div className={styles.banners} key={i.toString()}>
           <div className={styles.BannerGrid}>
-            {cars.slice(i, i + sliderItems)
-              .map((da) => <Car key={da.id} item={da} navigate={navigate} />)}
+            {cars.slice(i, i + sliderItems).map((da) => (
+              <Car key={da.id} item={da} navigate={navigate} />
+            ))}
           </div>
         </div>,
       );
@@ -42,21 +43,25 @@ function CarSlides({ navigate }) {
   }
 
   return (
-
     <div>
-      { loading
-        ? (
-          <PuffLoader
-            color={loaderColor}
-            css={cssOverride}
-            size={100}
-            loading={loading}
-          />
-        ) : (
-          <Carousel animation="slide" autoPlay cycleNavigation timeout={3000} indicators={false}>
-            { carLists }
-          </Carousel>
-        )}
+      {loading ? (
+        <PuffLoader
+          color={loaderColor}
+          css={cssOverride}
+          size={100}
+          loading={loading}
+        />
+      ) : (
+        <Carousel
+          animation="slide"
+          autoPlay
+          cycleNavigation
+          timeout={3000}
+          indicators={false}
+        >
+          {carLists}
+        </Carousel>
+      )}
     </div>
   );
 }
