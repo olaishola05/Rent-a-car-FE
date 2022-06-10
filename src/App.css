@@ -2,11 +2,12 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  position: relative;
 }
 
 .App {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
 }
 
 .container {
