@@ -8,7 +8,6 @@ const displayCar = (payload) => ({
 
 export const fetchCarFromDB = (id) => async (dispatch) => {
   const req = await (await fetch(`${URL}/cars/${id}`)).json();
-  console.log('reducer', req);
   dispatch(displayCar(req));
 };
 
