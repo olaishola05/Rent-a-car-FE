@@ -1,3 +1,5 @@
+// Disable default form submission when user hits enter.
+
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -20,16 +22,18 @@ const Reserve = () => {
   const [dropDate, setDropDate] = useState('');
   const [dropCity, setDropCity] = useState('');
   const [car, setCar] = useState('');
-
+  /* eslint consistent-return: off */
   const selectCar = () => {
     if (currentState.car.id === undefined) {
-      <>
-        <select onChange={(event) => setCar(event.target.value)}>
-          {currentState.cars.data.map((car, index) => (
-            <option key={car.id} value={index}>{car.model}</option>
-          ))}
-        </select>
-      </>;
+      return (
+        <>
+          <select onChange={(event) => setCar(event.target.value)}>
+            {currentState.cars.data.map((car, index) => (
+              <option key={car.id} value={index}>{car.model}</option>
+            ))}
+          </select>
+        </>
+      );
     }
   };
 

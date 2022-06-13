@@ -11,6 +11,7 @@ export const postReservationToApi = (data) => (dispatch) => {
     method: 'POST',
     body: data,
   })
+    .catch((err) => console.log(err))
     .then((response) => response.json());
   dispatch(postReservation());
 };
