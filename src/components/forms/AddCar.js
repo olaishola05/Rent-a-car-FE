@@ -53,7 +53,17 @@ const AddCar = () => {
         <div className="mb-3">
           <label htmlFor="image">
             Image
-            <input type="file" placeholder="Enter image" onChange={onchange} id="image" name="image" accept="image/*" />
+            <input
+              type="url"
+              onChange={onchange}
+              id="image"
+              name="image"
+              placeholder="https://example.com"
+              pattern="https://.*"
+              size="30"
+              required
+            />
+
           </label>
         </div>
 
