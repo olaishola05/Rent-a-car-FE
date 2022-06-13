@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import PuffLoader from 'react-spinners/PuffLoader';
 import { fetchCarFromDB } from '../../redux/reducers/cars/carReducer';
 
 const CarDetails = () => {
+  const navigate = useNavigate();
   const loaderColor = '#97bf0e';
   const loading = false;
   const cssOverride = `
@@ -46,6 +47,8 @@ const CarDetails = () => {
           {car.make}
           <span style={{ fontSize: '11px' }}>{car.model}</span>
         </h2>
+        
+        <button type="button" onClick={() => {navigate('/reserve')}}>Reserve</button>
         <p>{car.description}</p>
         <div>
           <h4>Other details</h4>
