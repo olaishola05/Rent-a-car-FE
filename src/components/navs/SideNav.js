@@ -4,7 +4,7 @@ import {
   FaTwitter, FaFacebookF, FaPinterestP, FaVimeoV,
 } from 'react-icons/fa';
 import { TiSocialGooglePlus } from 'react-icons/ti';
-import styles from '../Home.module.css';
+import styles from '../cars/Home.module.css';
 
 const links = [
   { id: 1, path: '/', text: 'MODELS' },
