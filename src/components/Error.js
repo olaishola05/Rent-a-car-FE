@@ -16,7 +16,7 @@ function Error() {
           You are not authorized to view this page.
         </p>
 
-        <NavLink to="/" class="btn btn-primary">Go To Home</NavLink>
+        <NavLink to="/" className="btn btn-primary">Go To Home</NavLink>
       </div>
     </div>
   );
