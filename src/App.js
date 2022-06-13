@@ -11,7 +11,6 @@ import AddCar from './components/forms/AddCar';
 
 import CarDetails from './components/cars/CarDetails';
 
-
 function App() {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
   return (

@@ -17,7 +17,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   cars: carsReducer,
   car: carReducer,
- AddCar: AddCarReducer
+  AddCar: AddCarReducer,
 });
 
 const store = createStore(rootReducer, compose(applyMiddleware(logger, thunk)));
