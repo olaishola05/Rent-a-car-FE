@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Rent-a-car
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+In this project, we have designed a booking app where a user can rent a car. The app also presents Admin privileges where an Admin can Add and Delete cars. This is engineered using Ruby on Rails as backend and React as front end. In this repository we have the frontend. The backend can be found [here.](https://github.com/brytebee/Rent-a-car)
 
-In the project directory, you can run:
+It is built as a requirement for the Microverse Final Capstone.
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Coming soon!](https://livedemo.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- React
+- JavaScript
+- Bootstrap
+- Material UI
+- HTML5
+- CSS3
+- Git & GitHub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Internet connection and basic computing skills.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. git clone `https://github.com/netman5/Rent-a-car-FE.git`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Installing the packages by running `npm install`
+2. Run `npm start`
 
-### `npm run eject`
+## Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. On the cmd run `cd Rent-a-car-FE`
+2. Run `npm test`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+👤 **Atsighi Bright**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- GitHub: [@brytebee](https://github.com/brytebee)
+- Twitter: [@brytebee](https://twitter.com/brytebee)
+- LinkedIn: [brytebee](https://www.linkedin.com/in/brytebee)
 
-## Learn More
+👤 **Ola Ishola**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- GitHub: [@netman5](https://github.com/netman5)
+- Twitter: [@Orlaish](https://twitter.com/Orlaish)
+- LinkedIn: [ola-ishola](https://www.linkedin.com/in/ola-ishola/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Mugisha Samuel**
 
-### Code Splitting
+- GitHub: [@mugishasamuel](https://github.com/mugishsam123)
+- LinkedIn: [mugishasamuel](https://www.linkedin.com/in/mugisha-samuel/)
+- Twitter: [@mugishasamuel42](https://twitter.com/mugishasamuel42)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 **Akshitha Reddy**
 
-### Analyzing the Bundle Size
+- GitHub: [@AkshithaReddy1899694419](https://github.com/AkshithaReddy1899)
+- Twitter: [@Aksha1899](https://twitter.com/Aksha1899)
+- LinkedIn: [Akshitha Reddy](https://www.linkedin.com/in/akshitha-reddy-718/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🤝 Contributing
 
-### Making a Progressive Web App
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Feel free to check the [issues page](https://github.com/brytebee/recipe-it/issues) here 😏😏.
 
-### Advanced Configuration
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Give a ⭐️ if you like this project!
 
-### Deployment
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Credits to [Murat Korkmaz](https://www.behance.net/muratk) for the [original design
+](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
-### `npm run build` fails to minify
+### Special thanks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All thank to _God Almighty_ for life.
+To the:
+
+- entire microverse community,
+- my coding partners,
+- stand-up team, and
+- morning team.
+
+Thanks for all contributions and reviews.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
