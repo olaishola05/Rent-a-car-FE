@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { postReservationToApi } from '../../redux/reducers/reserve';
 import { getCarsFromApi } from '../../redux/reducers/cars/carsReducer';
 
 const Reserve = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const currentState = useSelector((state) => state);
   const currentUser = JSON.parse(window.localStorage.getItem('user'));
@@ -21,7 +23,6 @@ const Reserve = () => {
 
   const selectCar = () => {
     if (currentState.car.id === undefined) {
-      console.log('Select');
       return (
         <>
           <select onChange={(event) => setCar(event.target.value)}>
@@ -45,9 +46,9 @@ const Reserve = () => {
         user_id: currentUser.user.id,
       },
     };
-    console.log('submit');
     event.preventDefault();
     dispatch(postReservationToApi(data));
+    navigate('/reservation')
   };
   return (
     <>
