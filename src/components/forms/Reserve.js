@@ -23,15 +23,13 @@ const Reserve = () => {
 
   const selectCar = () => {
     if (currentState.car.id === undefined) {
-      return (
-        <>
-          <select onChange={(event) => setCar(event.target.value)}>
-            {currentState.cars.data.map((car, index) => (
-              <option key={car.id} value={index}>{car.model}</option>
-            ))}
-          </select>
-        </>
-      );
+      <>
+        <select onChange={(event) => setCar(event.target.value)}>
+          {currentState.cars.data.map((car, index) => (
+            <option key={car.id} value={index}>{car.model}</option>
+          ))}
+        </select>
+      </>;
     }
   };
 
@@ -48,7 +46,7 @@ const Reserve = () => {
     };
     event.preventDefault();
     dispatch(postReservationToApi(data));
-    navigate('/reservation')
+    navigate('/reservation');
   };
   return (
     <>
