@@ -9,7 +9,7 @@ const postReservation = () => ({
 export const postReservationToApi = (data) => (dispatch) => {
   fetch('http://127.0.0.1:3001/api/v1/reservations', {
     method: 'POST',
-    body: data,
+    body: JSON.stringify(data),
   })
     .catch((err) => console.log(err))
     .then((response) => response.json());
