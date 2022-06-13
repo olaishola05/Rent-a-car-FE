@@ -29,7 +29,7 @@ export const logUserToApi = (userData) => (dispatch) => {
     headers: {
       'content-type': 'application/json',
       Accept: 'application/json',
-      Authorization: localStorage.token,
+
     },
     body: JSON.stringify({ user: userData }),
   })
