@@ -13,6 +13,9 @@ import CarDetails from './components/cars/CarDetails';
 
 function App() {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
+  const data = JSON.parse(localStorage.getItem('user'));
+  const { user } = data || {};
+
   return (
     <div className="App">
       <TopNav />
@@ -26,8 +29,13 @@ function App() {
           <>
             <Route path="/reserve" element="Reserve Form" />
             <Route path="/reservation" element="My Reservation" />
-            <Route path="/add-car" element={<AddCar />} />
-            <Route path="/delete" element="Delete Car" />
+            {user.role === 'admin'
+            && (
+            <>
+              <Route path="/add-car" element={<AddCar />} />
+              <Route path="/delete" element="Delete Car" />
+            </>
+            )}
           </>
         ) : (
           ''
