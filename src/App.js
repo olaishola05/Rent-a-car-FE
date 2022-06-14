@@ -8,9 +8,9 @@ import Register from './components/forms/Register';
 import Login from './components/forms/Login';
 import Error from './components/Error';
 import AddCar from './components/forms/AddCar';
-
 import CarDetails from './components/cars/CarDetails';
 import Reserve from './components/forms/Reserve';
+import MyReservations from './components/reservations/MyReservations';
 
 function App() {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -26,7 +26,7 @@ function App() {
         {isLoggedIn ? (
           <>
             <Route path="/reserve" element={<Reserve />} />
-            <Route path="/reservation" element="My Reservation" />
+            <Route path="/reservation" element={<MyReservations />} />
             <Route path="/add-car" element={<AddCar />} />
             <Route path="/delete" element="Delete Car" />
           </>
