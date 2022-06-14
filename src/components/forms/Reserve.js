@@ -1,5 +1,3 @@
-// Disable default form submission when user hits enter.
-
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -21,15 +19,17 @@ const Reserve = () => {
   const [pickCity, setPickCity] = useState('');
   const [dropDate, setDropDate] = useState('');
   const [dropCity, setDropCity] = useState('');
-  const [car, setCar] = useState('');
+  const [carId, setCarId] = useState('');
   /* eslint consistent-return: off */
+
   const selectCar = () => {
     if (currentState.car.id === undefined) {
       return (
         <>
-          <select onChange={(event) => setCar(event.target.value)}>
-            {currentState.cars.data.map((car, index) => (
-              <option key={car.id} value={index}>{car.model}</option>
+          <select onChange={(e) => setCarId(e.target.value)}>
+            <option defaultValue={0} selected disabled>Pick a car</option>
+            {currentState.cars.data.map((car) => (
+              <option key={car.id} value={car.id}>{car.model}</option>
             ))}
           </select>
         </>
@@ -39,15 +39,17 @@ const Reserve = () => {
 
   const handleSubmit = (event) => {
     const data = {
-      reservation: {
-        pick_up_date: pickDate,
-        pick_up_city: pickCity,
-        drop_off_date: dropDate,
-        return_city: dropCity,
-        car_id: currentState.car.id < 0 ? currentState.car.id : car.id,
-        user_id: currentUser.user.id,
-      },
+      pick_up_date: pickDate,
+      pick_up_city: pickCity,
+      drop_off_date: dropDate,
+      return_city: dropCity,
+      user_id: currentUser.user.id,
     };
+    if (currentState.car.id === undefined) {
+      data.car_id = carId;
+    } else if (currentState.car.id) {
+      data.car_id = currentState.car.id;
+    }
     event.preventDefault();
     dispatch(postReservationToApi(data));
     navigate('/reservation');
