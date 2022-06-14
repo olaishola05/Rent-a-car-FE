@@ -7,8 +7,6 @@ const getMyResevations = (payload) => ({
   payload,
 });
 
-/* eslint no-unused-vars: disable */
-
 export const getMyResevationsFromApi = () => (dispatch) => {
   fetch('http://127.0.0.1:3001/api/v1/reservations', {
     method: 'GET',
@@ -21,6 +19,7 @@ export const getMyResevationsFromApi = () => (dispatch) => {
     .then((data) => {
       const reservations = [];
       const currentUser = JSON.parse(window.localStorage.getItem('user'));
+      // eslint-disable-next-line no-unused-vars
       Object.entries(data).forEach(([key, value]) => {
         if (value.user_id === currentUser.user.id) {
           reservations.push(value);
