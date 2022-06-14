@@ -50,28 +50,14 @@
   color: white;
   font-weight: bold;
   background-color: red;
-  padding: 10px;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .navlinks li {
   list-style: none;
   padding: 0;
   margin-bottom: 15px;
-}
-
-.active{
-  color: white;
-  font-weight: bold;
-  background-color: #97bf0e;
-  padding: 10px;
-  width: 100%;
-}
-
-.notactive{
-  color: #3a3a3a;
-  font-weight: bold;
-  width: 100%;
 }
 
 .homecontainer {

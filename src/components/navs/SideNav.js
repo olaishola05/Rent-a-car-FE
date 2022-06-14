@@ -67,6 +67,7 @@ const SideNav = () => {
                   backgroundColor: '#97bf0e',
                   padding: '10px',
                   width: '100%',
+                  marginBottom: '5px',
                 }
                 : { color: '#3a3a3a', background: 'white', fontWeight: 'bold' })}
             >

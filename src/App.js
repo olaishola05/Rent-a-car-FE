@@ -7,6 +7,8 @@ import Home from './components/cars/Home';
 import Register from './components/forms/Register';
 import Login from './components/forms/Login';
 import Error from './components/Error';
+import AddCar from './components/forms/AddCar';
+
 import CarDetails from './components/cars/CarDetails';
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
             {user.role === 'admin'
             && (
             <>
-              <Route path="/add-car" element="Add Car" />
+              <Route path="/add-car" element={<AddCar />} />
               <Route path="/delete" element="Delete Car" />
             </>
             )}
