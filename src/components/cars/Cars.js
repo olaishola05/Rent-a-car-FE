@@ -9,7 +9,6 @@ import styles from './Home.module.css';
 
 function Car(props) {
   const { item, navigate } = props;
-
   const carColor = {
     backgroundColor: item.color,
     opacity: 1,
@@ -23,10 +22,11 @@ function Car(props) {
           <img src={item.image} alt={item.model} />
         </div>
       </div>
-
+      <br />
+      <br />
       <h4>{item.model}</h4>
-      <p>{item.description}</p>
-
+      <p className={styles.carDescription}>{item.description}</p>
+      <br />
       <div className={styles.icons}>
         <FaTwitter className={styles.icons} />
         <FaFacebookF className={styles.icons} />

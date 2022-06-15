@@ -10,10 +10,10 @@
 }
 
 .navlinks {
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-end;
   margin-top: 70px;
 }
@@ -22,7 +22,6 @@
   text-decoration: none;
   width: 130px;
   height: 50px;
-  border: 1px solid red;
 }
 
 .navlinks a:hover {
@@ -36,7 +35,6 @@
   padding: 0;
   margin-bottom: 15px;
   font-weight: bolder;
-  border: 1px solid blue;
   width: 150px;
   height: 40px;
 }
