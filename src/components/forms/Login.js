@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { logUserToApi } from '../../redux/reducers/userReducer';
 
 const Login = () => {
@@ -22,39 +21,44 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h3>SIGN IN </h3>
-      {error ? (
-        <div>
-          {typeof error === 'string'
-            ? (<span>{error}</span>)
-            : (error.map((errorItem) => (
-              <span key={errorItem}>{errorItem}</span>
-            ))
-            )}
+    <div className="container-fluid">
+      <div className="row">
+        <div className="column mt-5">
+          <div className="d-flex justify-content-center align-items-center flex-column shadow-lg rounded w-50 mx-auto p-5">
+            <h3 className="text-center">SIGN IN </h3>
+            <br />
+            {error ? (
+              <div>
+                {typeof error === 'string'
+                  ? (<span>{error}</span>)
+                  : (error.map((errorItem) => (
+                    <span key={errorItem}>{errorItem}</span>
+                  ))
+                  )}
+              </div>
+            ) : ''}
+            <form>
+              <div>
+                <label htmlFor="email" className="form-label">
+                  Email address
+                  <input type="email" placeholder="Enter email" onChange={onchange} id="email" name="email" className="form-control" />
+                </label>
+              </div>
+              <br />
+              <div>
+                <label htmlFor="password" className="form-label">
+                  Password
+                  <input type="password" placeholder="Password" onChange={onchange} id="password" name="password" className="form-control" />
+                </label>
+              </div>
+              <br />
+              <button type="submit" className="btn btn-secondary" onClick={handleSubmit}>
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-      ) : ''}
-      <form>
-
-        <div className="mb-3 form-control">
-          <label htmlFor="email">
-            Email address
-            <input type="email" placeholder="Enter email" onChange={onchange} id="email" name="email" />
-          </label>
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="password">
-            Password
-            <input type="password" placeholder="Password" onChange={onchange} id="password" name="password" />
-          </label>
-        </div>
-
-        <button type="submit" onClick={handleSubmit}>
-          Submit
-        </button>
-      </form>
-
+      </div>
     </div>
   );
 };

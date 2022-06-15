@@ -26,12 +26,13 @@ const Reserve = () => {
     if (currentState.car.id === undefined) {
       return (
         <>
-          <select onChange={(e) => setCarId(e.target.value)}>
+          <select className="form-control" onChange={(e) => setCarId(e.target.value)}>
             <option defaultValue={0} selected disabled>Pick a car</option>
             {currentState.cars.data.map((car) => (
               <option key={car.id} value={car.id}>{car.model}</option>
             ))}
           </select>
+          <br />
         </>
       );
     }
@@ -55,30 +56,41 @@ const Reserve = () => {
     navigate('/reservation');
   };
   return (
-    <>
-      <div>Reserve a car</div>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="column mt-5">
+          <div className="d-flex justify-content-center align-items-center flex-column shadow-lg rounded w-50 mx-auto p-5">
+            <h3 className="text-center">Reserve a car</h3>
+            <br />
+            <form onSubmit={handleSubmit}>
+              {selectCar()}
+              <label htmlFor="pick_up_date" className="form-label">
+                <input type="date" name="pick_up_date" onChange={(e) => setPickDate(e.target.value)} className="form-control" />
+              </label>
+              <br />
+              <br />
+              <label htmlFor="drop_off_date" className="form-label">
+                <input type="date" name="drop_off_date" onChange={(e) => setDropDate(e.target.value)} className="form-control" />
+              </label>
+              <br />
+              <br />
+              <label htmlFor="pick_up_city" className="form-label">
+                <input type="text" name="pick_up_city" placeholder="pick up city" onChange={(e) => setPickCity(e.target.value)} className="form-control" />
+              </label>
+              <br />
+              <br />
+              <label htmlFor="return_city" className="form-label">
+                <input type="text" name="return_city" placeholder="drop off city" onChange={(e) => setDropCity(e.target.value)} className="form-control" />
+              </label>
+              <br />
+              <br />
+              <button type="submit" className="btn btn-secondary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
 
-      <form onSubmit={handleSubmit}>
-        {selectCar()}
-        <label htmlFor="pick_up_date">
-          <input type="date" name="pick_up_date" onChange={(e) => setPickDate(e.target.value)} />
-        </label>
-
-        <label htmlFor="drop_off_date">
-          <input type="date" name="drop_off_date" onChange={(e) => setDropDate(e.target.value)} />
-        </label>
-
-        <label htmlFor="pick_up_city">
-          <input type="text" name="pick_up_city" placeholder="pick up city" onChange={(e) => setPickCity(e.target.value)} />
-        </label>
-
-        <label htmlFor="return_city">
-          <input type="text" name="return_city" placeholder="drop off city" onChange={(e) => setDropCity(e.target.value)} />
-        </label>
-
-        <button type="submit">Submit</button>
-      </form>
-    </>
+    </div>
   );
 };
 

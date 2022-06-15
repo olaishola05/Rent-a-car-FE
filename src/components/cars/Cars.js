@@ -9,25 +9,24 @@ import styles from './Home.module.css';
 
 function Car(props) {
   const { item, navigate } = props;
-
   const carColor = {
     backgroundColor: item.color,
-    width: '100%',
-    height: '100%',
-    opacity: 0.5,
+    opacity: 1,
     borderRadius: '50%',
   };
 
   return (
     <div className={styles.slideItem} onClick={() => navigate(item.id)}>
-      <div className={styles.imgbg} style={carColor}>test</div>
-      <div className={styles.imageContainer}>
-        <img src={item.image} alt={item.model} />
+      <div className={styles.imgbg} style={carColor}>
+        <div className={styles.imageContainer}>
+          <img src={item.image} alt={item.model} />
+        </div>
       </div>
-
+      <br />
+      <br />
       <h4>{item.model}</h4>
-      <p>{item.description}</p>
-
+      <p className={styles.carDescription}>{item.description}</p>
+      <br />
       <div className={styles.icons}>
         <FaTwitter className={styles.icons} />
         <FaFacebookF className={styles.icons} />

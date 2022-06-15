@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import PuffLoader from 'react-spinners/PuffLoader';
 import { fetchCarFromDB } from '../../redux/reducers/cars/carReducer';
+import styles from './Home.module.css';
 
 const CarDetails = () => {
   const navigate = useNavigate();
@@ -34,30 +35,41 @@ const CarDetails = () => {
       )}
       <div
         key={car.id}
-        style={{
-          position: 'absolute',
-        }}
+        className={styles.carDetailsContainer}
       >
         <img
-          style={{ width: '100%', border: '7px', zIndex: '-10' }}
+          className={styles.carDetailsImg}
           src={car.image}
           alt={car.make}
         />
-        <h2>
-          {car.make}
-          <span style={{ fontSize: '11px' }}>{car.model}</span>
-        </h2>
-        
-        <button type="button" onClick={() => {navigate('/reserve')}}>Reserve</button>
-        <p>{car.description}</p>
-        <div>
-          <h4>Other details</h4>
-          <p>{car.engine}</p>
-          <p>{car.seat}</p>
-          <p>{car.aircon}</p>
-          <p>{car.updated_at}</p>
-          <p>{car.year}</p>
-          <p>{car.color}</p>
+        <div className={styles.carDetailsInfo}>
+          <h2>
+            {car.make}
+            <span style={{ fontSize: '11px' }}>{car.model}</span>
+          </h2>
+          <p>{car.description}</p>
+          <div>
+            <h4>Other details</h4>
+            <p>
+              Car type:&nbsp;
+              <b>{car.engine}</b>
+            </p>
+            <p>
+              Seats:&nbsp;
+              <b>{car.seat}</b>
+            </p>
+            <p>{car.aircon}</p>
+            <p>{car.updated_at}</p>
+            <p>
+              Released year:&nbsp;
+              <b>{car.year}</b>
+            </p>
+            <p>
+              Color:&nbsp;
+              <button type="button" style={{ backgroundColor: car.color, width: '100px', borderColor: 'orange' }}>{car.color}</button>
+            </p>
+            <button type="button" className={styles.btnReserve} onClick={() => { navigate('/reserve'); }}>Reserve</button>
+          </div>
         </div>
       </div>
     </div>
