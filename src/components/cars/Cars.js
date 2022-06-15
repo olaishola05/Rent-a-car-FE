@@ -12,17 +12,16 @@ function Car(props) {
 
   const carColor = {
     backgroundColor: item.color,
-    width: '100%',
-    height: '100%',
-    opacity: 0.5,
+    opacity: 0.4,
     borderRadius: '50%',
   };
 
   return (
     <div className={styles.slideItem} onClick={() => navigate(item.id)}>
-      <div className={styles.imgbg} style={carColor}>test</div>
-      <div className={styles.imageContainer}>
-        <img src={item.image} alt={item.model} />
+      <div className={styles.imgbg} style={carColor}>
+        <div className={styles.imageContainer}>
+          <img src={item.image} alt={item.model} />
+        </div>
       </div>
 
       <h4>{item.model}</h4>

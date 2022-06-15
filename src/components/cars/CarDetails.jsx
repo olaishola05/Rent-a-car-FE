@@ -47,7 +47,6 @@ const CarDetails = () => {
           {car.make}
           <span style={{ fontSize: '11px' }}>{car.model}</span>
         </h2>
-        
         <button type="button" onClick={() => {navigate('/reserve')}}>Reserve</button>
         <p>{car.description}</p>
         <div>
