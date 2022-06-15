@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import { useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import TopNav from './components/navs/TopNav';
 import SideNav from './components/navs/SideNav';
@@ -10,10 +11,12 @@ import Error from './components/Error';
 import AddCar from './components/forms/AddCar';
 
 import CarDetails from './components/cars/CarDetails';
+import DeleteCar from './components/cars/DeleteCar';
 
 function App() {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
   const data = JSON.parse(localStorage.getItem('user'));
+  const car = useSelector((state) => state.cars);
   const { user } = data || {};
 
   return (
@@ -29,12 +32,11 @@ function App() {
           <>
             <Route path="/reserve" element="Reserve Form" />
             <Route path="/reservation" element="My Reservation" />
-            {user.role === 'admin'
-            && (
-            <>
-              <Route path="/add-car" element={<AddCar />} />
-              <Route path="/delete" element="Delete Car" />
-            </>
+            {user.role === 'admin' && (
+              <>
+                <Route path="/add-car" element={<AddCar />} />
+                <Route path="/delete" element={<DeleteCar car={car} />} />
+              </>
             )}
           </>
         ) : (
