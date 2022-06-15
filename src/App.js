@@ -31,21 +31,13 @@ function App() {
         <Route path="/sign_in" element={<Login />} />
         {isLoggedIn ? (
           <>
-            <Route path="/reserve" element="Reserve Form" />
-            <Route path="/reservation" element="My Reservation" />
+            <Route path="/reserve" element={<Reserve />} />
+            <Route path="/reservation" element={<MyReservations />} />
             {user.role === 'admin' && (
               <>
                 <Route path="/add-car" element={<AddCar />} />
                 <Route path="/delete" element={<DeleteCar car={car} />} />
               </>
-            <Route path="/reserve" element={<Reserve />} />
-            <Route path="/reservation" element={<MyReservations />} />
-            {user.role === 'admin'
-            && (
-            <>
-              <Route path="/add-car" element={<AddCar />} />
-              <Route path="/delete" element="Delete Car" />
-            </>
             )}
           </>
         ) : (
