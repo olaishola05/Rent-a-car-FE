@@ -29,7 +29,6 @@ export const logUserToApi = (userData) => (dispatch) => {
     headers: {
       'content-type': 'application/json',
       Accept: 'application/json',
-
     },
     body: JSON.stringify({ user: userData }),
   })
