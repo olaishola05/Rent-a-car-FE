@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCarsFromApi } from '../../redux/reducers/cars/carsReducer';
 import { deleteCarFromAPI } from '../../redux/reducers/cars/deleteCar';
+import style from './DeleteCar.module.css';
 
 const DeleteCar = () => {
   const fetchedCars = useSelector((state) => state.cars);
@@ -19,21 +20,19 @@ const DeleteCar = () => {
 
   return (
     <div>
-      <h1>DeleteCar</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi
-        mollitia quam nesciunt, in obcaecati voluptatem! Odit quo pariatur
-        dolorem.
-      </p>
       {cars.map((car) => (
-        <div key={car.id}>
+        <div key={car.id} className={style.container}>
           <img
             style={{ width: '100px' }}
             src={car.image}
             alt={`${car.make} ${car.model}`}
           />
-          <div>{car.model}</div>
-          <button onClick={() => handleDelete(car.id)} type="button">
+          <div className={style.model}>{car.model}</div>
+          <button
+            className={style.button}
+            onClick={() => handleDelete(car.id)}
+            type="button"
+          >
             Delete
           </button>
         </div>

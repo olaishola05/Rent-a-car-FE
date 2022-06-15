@@ -12,7 +12,7 @@ function Car(props) {
 
   const carColor = {
     backgroundColor: item.color,
-    opacity: 0.4,
+    opacity: 1,
     borderRadius: '50%',
   };
 
