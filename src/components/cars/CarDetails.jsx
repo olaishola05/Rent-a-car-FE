@@ -66,7 +66,7 @@ const CarDetails = () => {
             </p>
             <p>
               Color:&nbsp;
-              <b>{car.color}</b>
+              <button type="button" style={{ backgroundColor: car.color, width: '100px', borderColor: 'orange' }}>{car.color}</button>
             </p>
             <button type="button" className={styles.btnReserve} onClick={() => { navigate('/reserve'); }}>Reserve</button>
           </div>
