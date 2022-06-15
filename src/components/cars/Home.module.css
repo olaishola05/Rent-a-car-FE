@@ -93,3 +93,23 @@ img {
 ::-webkit-scrollbar-thumb {
   color: gray;
 }
+
+/* DETAILS */
+
+.carDetailsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  padding: 50px;
+}
+
+.carDetailsImg {
+  width: 50%;
+  height: auto;
+}
+
+.carDetailsInfo {
+  width: 50%;
+  padding: 20px;
+}
