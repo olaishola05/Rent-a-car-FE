@@ -39,19 +39,19 @@ const Login = () => {
         <div className="mb-3 form-control">
           <label htmlFor="email">
             Email address
-            <input type="email" placeholder="Enter email" onChange={onchange} id="email" name="email" />
+            <input type="email" data-testid="email-input" placeholder="Enter email" onChange={onchange} id="email" name="email" />
           </label>
         </div>
 
         <div className="mb-3">
           <label htmlFor="password">
             Password
-            <input type="password" placeholder="Password" onChange={onchange} id="password" name="password" />
+            <input type="password" data-testid="password-input" placeholder="Password" onChange={onchange} id="password" name="password" />
           </label>
         </div>
 
         <button type="submit" onClick={handleSubmit}>
-          Submit
+          sign in
         </button>
       </form>
 

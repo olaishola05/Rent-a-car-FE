@@ -71,7 +71,7 @@ const Register = () => {
         </div>
 
         <button type="submit" onClick={handleSubmit}>
-          Submit
+          sign up
         </button>
       </form>
 
