@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable no-tabs */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getMyResevationsFromApi } from '../../redux/reducers/myReservations';
+import styles from './MyReservations.module.css';
 
 const MyReservations = () => {
   const dispatch = useDispatch();
@@ -21,27 +23,37 @@ const MyReservations = () => {
     <>
       <ul>
         {
-				currentReservations.map((item) => (
-  <li key={item.id}>
-    <span>
-      Pick up date:
-      {item.pick_up_date}
-    </span>
-    <span>
-      Pick up city:
-      {item.pick_up_city}
-    </span>
-    <span>
-      Drop off date:
-      {item.drop_off_date}
-    </span>
-    <span>
-      Drop up city:
-      {item.return_city}
-    </span>
-    <button type="button" id={item.car_id} onClick={((e) => { handleClick(e); })}>Car details</button>
-  </li>
-				))
+          (currentReservations.length === 0)
+            ? (
+              <div className={styles.noReservations}>
+                <p className="text-center">No cars reserved</p>
+              </div>
+            )
+            : (
+              <table className="table-success">
+                <thead>
+                  <tr>
+                    <th scope="col">Pick up date</th>
+                    <th scope="col">Drop off date</th>
+                    <th scope="col">Pick up city</th>
+                    <th scope="col">Drop off city</th>
+                    <th scope="col">Car details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {currentReservations.map((item) => (
+                    <tr>
+                      <th scope="row">{item.id}</th>
+                      <td>{item.pick_up_date}</td>
+                      <td>{item.drop_off_date}</td>
+                      <td>{item.pick_up_city}</td>
+                      <td>{item.return_city}</td>
+                      <td><button type="button" id={item.car_id} onClick={((e) => { handleClick(e); })}>Car details</button></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )
 			}
       </ul>
     </>

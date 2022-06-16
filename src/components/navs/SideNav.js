@@ -4,7 +4,7 @@ import {
   FaTwitter, FaFacebookF, FaPinterestP, FaVimeoV,
 } from 'react-icons/fa';
 import { TiSocialGooglePlus } from 'react-icons/ti';
-import styles from '../cars/Home.module.css';
+import styles from './SideNav.module.css';
 
 const adminLinks = [
   { id: 1, path: '/', text: 'MODELS' },
@@ -21,7 +21,7 @@ const links = [
 ];
 
 const SocialMedia = () => (
-  <>
+  <div className="position-absolute bottom-0 start-0">
     <div className={styles.socialmedia}>
       <FaTwitter className={styles.icons} />
       <FaFacebookF className={styles.icons} />
@@ -32,52 +32,49 @@ const SocialMedia = () => (
     <div>
       <p className={styles.footer}>&copy; 2020 Rent A Car Company</p>
     </div>
-  </>
+  </div>
 );
 
 const SideNav = () => {
   const data = JSON.parse(localStorage.getItem('user'));
   const { user } = data || {};
   return (
-    <div className={styles.sidenav}>
-      <ul className={styles.navlinks}>
-        {user && user.role === 'admin' ? (adminLinks.map((link) => (
-          <li key={link.id}>
-            <NavLink
-              to={link.path}
-              style={({ isActive }) => (isActive
-                ? {
-                  color: '#fff',
-                  backgroundColor: '#97bf0e',
-                  padding: '10px',
-                  width: '100%',
-                }
-                : { color: '#3a3a3a', background: 'white', fontWeight: 'bold' })}
-            >
-              {link.text}
-            </NavLink>
-          </li>
-        ))) : links.map((link) => (
-          <li key={link.id}>
-            <NavLink
-              to={link.path}
-              style={({ isActive }) => (isActive
-                ? {
-                  color: '#fff',
-                  backgroundColor: '#97bf0e',
-                  padding: '10px',
-                  width: '100%',
-                  marginBottom: '5px',
-                }
-                : { color: '#3a3a3a', background: 'white', fontWeight: 'bold' })}
-            >
-              {link.text}
-            </NavLink>
-          </li>
-        ))}
-
-      </ul>
-      <SocialMedia />
+    <div className="bg-light">
+      <div className={styles.sidebar}>
+        <ul className={styles.navlinks}>
+          {user && user.role === 'admin' ? (adminLinks.map((link) => (
+            <li key={link.id}>
+              <NavLink
+                to={link.path}
+                style={({ isActive }) => (isActive
+                  ? {
+                    color: '#fff',
+                    backgroundColor: '#97bf0e',
+                    width: '150px',
+                  }
+                  : { color: '#3a3a3a' })}
+              >
+                {link.text}
+              </NavLink>
+            </li>
+          ))) : links.map((link) => (
+            <li key={link.id}>
+              <NavLink
+                to={link.path}
+                style={({ isActive }) => (isActive
+                  ? {
+                    color: '#fff',
+                    backgroundColor: '#97bf0e',
+                  }
+                  : { color: '#3a3a3a' })}
+              >
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+        <SocialMedia />
+      </div>
     </div>
   );
 };

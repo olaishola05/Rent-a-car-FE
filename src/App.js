@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default */
+// import logo from './logo.svg';
 import { useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import TopNav from './components/navs/TopNav';
@@ -22,28 +24,30 @@ function App() {
   return (
     <div className="App">
       <TopNav />
-      <SideNav />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/cars/:id" element={<CarDetails />} />
-        <Route path="/sign_up" element={<Register />} />
-        <Route path="/sign_in" element={<Login />} />
-        {isLoggedIn ? (
-          <>
-            <Route path="/reserve" element={<Reserve />} />
-            <Route path="/reservation" element={<MyReservations />} />
-            {user.role === 'admin' && (
+      <div className="d-flex">
+        <SideNav />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/cars/:id" element={<CarDetails />} />
+          <Route path="/sign_up" element={<Register />} />
+          <Route path="/sign_in" element={<Login />} />
+          {isLoggedIn ? (
+            <>
+              <Route path="/reserve" element={<Reserve />} />
+              <Route path="/reservation" element={<MyReservations />} />
+              {user.role === 'admin' && (
               <>
                 <Route path="/add-car" element={<AddCar />} />
                 <Route path="/delete" element={<DeleteCar car={car} />} />
               </>
-            )}
-          </>
-        ) : (
-          ''
-        )}
-        <Route path="*" element={<Error />} />
-      </Routes>
+              )}
+            </>
+          ) : (
+            ''
+          )}
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </div>
     </div>
   );
 }
