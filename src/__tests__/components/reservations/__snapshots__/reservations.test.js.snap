@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyReservations renders correctly 1`] = `
+<ul>
+  <div
+    className="noReservations"
+  >
+    <p
+      className="text-center"
+    >
+      No cars reserved
+    </p>
+  </div>
+</ul>
+`;

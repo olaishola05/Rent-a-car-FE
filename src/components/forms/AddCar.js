@@ -191,13 +191,14 @@ const AddCar = () => {
                   type="submit"
                   onClick={handleSubmit}
                 >
-                  Submit
+                  Add car
                 </button>
               </form>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   );
 };

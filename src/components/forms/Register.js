@@ -74,7 +74,7 @@ const Register = () => {
               </div>
               <br />
               <button type="submit" className="btn btn-secondary" onClick={handleSubmit}>
-                Submit
+                sign up
               </button>
             </form>
           </div>

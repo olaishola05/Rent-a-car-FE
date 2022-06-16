@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cars renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="homecontainer"
+  >
+    <div
+      className="info"
+    >
+      <h1>
+        Latest Models
+      </h1>
+      <span>
+        Please select a car
+      </span>
+    </div>
+    <div>
+      <div
+        className=" css-ohwg9z"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <div
+          className="css-1f8sh1y"
+          style={
+            Object {
+              "height": undefined,
+            }
+          }
+        />
+        <div
+          className=" css-1abc02a"
+          style={Object {}}
+        >
+          <button
+            aria-label="Next"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium  css-ktslay-MuiButtonBase-root-MuiIconButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={Object {}}
+            tabIndex={0}
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="NavigateNextIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className=" css-hn784z"
+          style={Object {}}
+        >
+          <button
+            aria-label="Previous"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium  css-ktslay-MuiButtonBase-root-MuiIconButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={Object {}}
+            tabIndex={0}
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="NavigateBeforeIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register renders correctly 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="column mt-5"
+    >
+      <div
+        className="d-flex justify-content-center align-items-center flex-column shadow-lg rounded w-50 mx-auto p-5"
+      >
+        <h3
+          className="text-center"
+        >
+          Register user
+        </h3>
+        <br />
+        <form>
+          <div>
+            <label
+              className="form-label"
+              htmlFor="name"
+            >
+              Name
+              <input
+                className="form-control"
+                id="name"
+                name="name"
+                onChange={[Function]}
+                placeholder="Enter name"
+                type="text"
+              />
+            </label>
+          </div>
+          <br />
+          <div>
+            <label
+              className="form-label"
+              htmlFor="username"
+            >
+              username
+              <input
+                className="form-control"
+                id="username"
+                name="username"
+                onChange={[Function]}
+                placeholder="Enter username"
+                type="text"
+              />
+            </label>
+          </div>
+          <br />
+          <div>
+            <label
+              className="form-label"
+              htmlFor="email"
+            >
+              Email address
+              <input
+                className="form-control"
+                id="email"
+                name="email"
+                onChange={[Function]}
+                placeholder="Enter email"
+                type="email"
+              />
+            </label>
+          </div>
+          <br />
+          <div>
+            <label
+              className="form-label"
+              htmlFor="password"
+            >
+              Password
+              <input
+                className="form-control"
+                id="password"
+                name="password"
+                onChange={[Function]}
+                placeholder="Password"
+                type="password"
+              />
+            </label>
+          </div>
+          <br />
+          <div>
+            <label
+              className="form-label"
+              htmlFor="password_confirmation"
+            >
+              Password confirmation
+              <input
+                className="form-control"
+                id="password_confirmation"
+                name="password_confirmation"
+                onChange={[Function]}
+                placeholder="Password Confirmation"
+                type="password"
+              />
+            </label>
+          </div>
+          <br />
+          <button
+            className="btn btn-secondary"
+            onClick={[Function]}
+            type="submit"
+          >
+            sign up
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -41,19 +41,19 @@ const Login = () => {
               <div>
                 <label htmlFor="email" className="form-label">
                   Email address
-                  <input type="email" placeholder="Enter email" onChange={onchange} id="email" name="email" className="form-control" />
+                  <input type="email" data-testid="email-input" placeholder="Enter email" onChange={onchange} id="email" name="email" className="form-control" />
                 </label>
               </div>
               <br />
               <div>
                 <label htmlFor="password" className="form-label">
                   Password
-                  <input type="password" placeholder="Password" onChange={onchange} id="password" name="password" className="form-control" />
+                  <input type="password" data-testid="password-input" placeholder="Password" onChange={onchange} id="password" name="password" className="form-control" />
                 </label>
               </div>
               <br />
               <button type="submit" className="btn btn-secondary" onClick={handleSubmit}>
-                Submit
+                sign in
               </button>
             </form>
           </div>
