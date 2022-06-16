@@ -62,7 +62,6 @@ img {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid red;
 }
 
 .BannerGrid {
@@ -142,4 +141,26 @@ img {
    display: flex;
    flex-direction: column;
  }
-}
+
+ .slideItem {
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 10px;
+   cursor: pointer;
+ }
+
+ .icons {
+   width: 100%;
+   height: auto;
+   display: flex;
+   /* flex-direction: row; */
+   justify-content: center;
+   align-items: center;
+ }
+
+ }
+
