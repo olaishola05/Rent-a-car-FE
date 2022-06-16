@@ -120,25 +120,25 @@ img {
 }
 
 @media screen and (max-width: 768px) {
- .homecontainer {
-   width: 100%;
-   position: absolute;
-   top: 120px;
-   right: 0;
-   border: 1px solid green;
- }
+  .homecontainer {
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    border: 1px solid green;
+  }
 
- .info {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   margin: 0 auto;
-   margin-bottom: 20px;
- }
+  .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 
- .BannerGrid {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
- }
+  .BannerGrid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
