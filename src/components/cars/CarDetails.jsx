@@ -64,10 +64,24 @@ const CarDetails = () => {
               Released year:&nbsp;
               <b>{car.year}</b>
             </p>
-            <p>
-              Color:&nbsp;
-              <button type="button" style={{ backgroundColor: car.color, width: '100px', borderColor: 'orange' }}>{car.color}</button>
-            </p>
+            <div className="d-flex">
+              <p>Color:</p>
+&nbsp;&nbsp;
+              <div
+                style={
+                {
+                  backgroundColor: car.color,
+                  width: '30px',
+                  height: '30px',
+                  borderRadius: '100%',
+                  borderColor: 'orange',
+                }
+}
+              >
+&nbsp;
+
+              </div>
+            </div>
             <button type="button" className={styles.btnReserve} onClick={() => { navigate('/reserve'); }}>Reserve</button>
           </div>
         </div>

@@ -41,8 +41,8 @@ const TopNav = () => {
           </div>
         ) : (
           <>
-            <Button variant="contained"><NavLink to="/sign_in">Login</NavLink></Button>
-            <Button type="button"><NavLink to="/sign_up">Register</NavLink></Button>
+            <Button variant="contained"><NavLink to="/sign_in" className={styles.login}>Login</NavLink></Button>
+            <Button type="button"><NavLink to="/sign_up" className={styles.signup}>Register</NavLink></Button>
           </>
         )
       }

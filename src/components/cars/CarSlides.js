@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 import Carousel from 'react-material-ui-carousel';
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,6 +14,8 @@ function CarSlides({ navigate }) {
   const { data: cars, loading } = state;
   const loaderColor = '#97bf0e';
 
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
   const cssOverride = `
   display: block;
   margin: 100px auto;
@@ -26,14 +29,17 @@ function CarSlides({ navigate }) {
   }, []);
 
   const sliderItems = cars.length > 3 ? 3 : cars.length;
+  const mobileItems = cars.length > 1 ? 1 : cars.length;
   const carLists = [];
 
   for (let i = 0; i < cars.length; i += sliderItems) {
-    if (i % sliderItems === 0) {
+    if (i % sliderItems === 0 && i % mobileItems === 0) {
       carLists.push(
         <div className={styles.banners} key={i.toString()}>
           <div className={styles.BannerGrid}>
-            {cars.slice(i, i + sliderItems).map((da) => (
+            {isMobile ? cars.slice(i, i + mobileItems).map((da) => (
+              <Car key={da.id} item={da} navigate={navigate} />
+            )) : cars.slice(i, i + sliderItems).map((da) => (
               <Car key={da.id} item={da} navigate={navigate} />
             ))}
           </div>
