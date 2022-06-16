@@ -7,14 +7,13 @@ import store from '../../../../redux/configureStore';
 
 import Login from '../../../../components/forms/Login';
 
-
 it('Login renders correctly', () => {
-    const tree = renderer.create(
-      <Provider store={store}>
-        <Router>
-          <Login />
-        </Router>
-      </Provider>,
-    );
-    expect(tree).toMatchSnapshot();
-  });
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Router>
+        <Login />
+      </Router>
+    </Provider>,
+  );
+  expect(tree).toMatchSnapshot();
+});
