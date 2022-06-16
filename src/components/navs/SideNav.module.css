@@ -1,6 +1,6 @@
 .sidebar {
   width: 200px;
-  height: 85vh;
+  height: 100vh;
 }
 
 .sidenav,
@@ -20,8 +20,6 @@
 
 .navlinks a {
   text-decoration: none;
-  width: 130px;
-  height: 50px;
 }
 
 .navlinks a:hover {
@@ -32,11 +30,13 @@
 
 .navlinks li {
   list-style: none;
-  padding: 0;
   margin-bottom: 15px;
   font-weight: bolder;
-  width: 150px;
+  width: 160px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .socialmedia {
