@@ -7,5 +7,8 @@ to avoid conflicts.
 
 - antd for styling & components
 - Material UI
+- BootStrap
+- Material-ui-carousel
+- React Icons
 
 Thanks and happy coding.
