@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login renders correctly 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="column mt-5"
+    >
+      <div
+        className="d-flex justify-content-center align-items-center flex-column shadow-lg rounded w-50 mx-auto p-5"
+      >
+        <h3
+          className="text-center"
+        >
+          SIGN IN 
+        </h3>
+        <br />
+        <form>
+          <div>
+            <label
+              className="form-label"
+              htmlFor="email"
+            >
+              Email address
+              <input
+                className="form-control"
+                data-testid="email-input"
+                id="email"
+                name="email"
+                onChange={[Function]}
+                placeholder="Enter email"
+                type="email"
+              />
+            </label>
+          </div>
+          <br />
+          <div>
+            <label
+              className="form-label"
+              htmlFor="password"
+            >
+              Password
+              <input
+                className="form-control"
+                data-testid="password-input"
+                id="password"
+                name="password"
+                onChange={[Function]}
+                placeholder="Password"
+                type="password"
+              />
+            </label>
+          </div>
+          <br />
+          <button
+            className="btn btn-secondary"
+            onClick={[Function]}
+            type="submit"
+          >
+            sign in
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,54 @@
+.noReservations {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.reservations {
+  width: 70%;
+  margin: 8px auto;
+  padding: 10px;
+}
+
+.tableSucess,
+thead {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+tr {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #97bf0e;
+  color: white;
+}
+
+.reserveBtn {
+  width: 65%;
+  height: auto;
+  padding: 5px;
+  color: black;
+  border: 1px solid #97bf0e;
+  border-radius: 5px;
+}
+
+.reserveBtn:hover {
+  border: 1px solid white;
+  color: white;
+}

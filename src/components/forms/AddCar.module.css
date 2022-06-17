@@ -1,0 +1,44 @@
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.addForm {
+  width: 90%;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  padding-top: 40px;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.formBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.reserveBg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/7707c436-8efb-48b4-a23f-dbc9220b3274/229ba39c-1358-4804-87b6-b7eb42d68fae.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.reserveContainer {
+  z-index: 1;
+  background-color: rgba(133, 207, 133, 0.5);
+}

@@ -1,0 +1,37 @@
+.deleteContainer {
+  width: 80%;
+  display: grid;
+  place-content: start;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+button {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background: transparent;
+  color: red;
+  border-radius: 13px;
+  width: 60px;
+  max-height: 42px;
+  border: none;
+  align-self: center;
+}
+
+.model {
+  align-self: center;
+  font-size: 18px;
+}
+
+.container {
+  margin-left: 2rem;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  gap: 30px;
+  box-shadow: #97bf0e 0 0 3px;
+  padding: 5px;
+}

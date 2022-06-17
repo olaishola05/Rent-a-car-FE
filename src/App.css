@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.btn {
+  width: 100px;
+}
+
+.container {
+  width: 98%;
+  display: flex;
+  padding: 10px;
+  gap: 1px;
+  margin-top: 40px;
+}
