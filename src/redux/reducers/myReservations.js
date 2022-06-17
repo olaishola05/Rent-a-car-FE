@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const FETCH_MY_RESERVATIONS = 'FETCH_MY_RESERVATIONS';
 
 const initialState = [];
@@ -14,12 +15,11 @@ export const getMyResevationsFromApi = () => (dispatch) => {
       Authorization: localStorage.token,
     },
   })
-    .catch((err) => console.log(err))
+    .catch((err) => err)
     .then((res) => res.json())
     .then((data) => {
       const reservations = [];
       const currentUser = JSON.parse(window.localStorage.getItem('user'));
-      // eslint-disable-next-line no-unused-vars
       Object.entries(data).forEach(([key, value]) => {
         if (value.user_id === currentUser.user.id) {
           reservations.push(value);

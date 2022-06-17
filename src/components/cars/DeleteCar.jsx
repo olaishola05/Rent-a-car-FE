@@ -19,7 +19,7 @@ const DeleteCar = () => {
   }, []);
 
   return (
-    <div>
+    <div className={style.deleteContainer}>
       {cars.map((car) => (
         <div key={car.id} className={style.container}>
           <img

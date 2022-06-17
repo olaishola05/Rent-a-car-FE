@@ -1,5 +1,3 @@
-/* eslint-disable import/no-named-as-default */
-// import logo from './logo.svg';
 import { useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import TopNav from './components/navs/TopNav';

@@ -28,9 +28,9 @@ function Car(props) {
       <p className={styles.carDescription}>{item.description}</p>
       <br />
       <div className={styles.icons}>
-        <FaTwitter className={styles.icons} />
-        <FaFacebookF className={styles.icons} />
-        <FaPinterestP className={styles.icons} />
+        <FaTwitter className={styles.icon} />
+        <FaFacebookF className={styles.icon} />
+        <FaPinterestP className={styles.icon} />
       </div>
     </div>
   );
