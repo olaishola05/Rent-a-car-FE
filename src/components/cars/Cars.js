@@ -11,8 +11,8 @@ function Car(props) {
   const { item, navigate } = props;
   const carColor = {
     backgroundColor: item.color,
-    opacity: 1,
     borderRadius: '50%',
+    backdropFilter: 'opacity(20%)',
   };
 
   return (

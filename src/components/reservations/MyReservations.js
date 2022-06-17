@@ -21,7 +21,7 @@ const MyReservations = () => {
   });
   return (
     <>
-      <ul>
+      <ul className={styles.reservations}>
         {
           (currentReservations.length === 0)
             ? (
@@ -30,9 +30,10 @@ const MyReservations = () => {
               </div>
             )
             : (
-              <table className="table-success">
+              <table className={styles.tableSucess}>
                 <thead>
                   <tr>
+                    <th scope="col">Reservation Id</th>
                     <th scope="col">Pick up date</th>
                     <th scope="col">Drop off date</th>
                     <th scope="col">Pick up city</th>
@@ -41,14 +42,14 @@ const MyReservations = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {currentReservations.map((item) => (
+                  {currentReservations.map((item, index) => (
                     <tr>
-                      <th scope="row">{item.id}</th>
+                      <th scope="row">{index + 1}</th>
                       <td>{item.pick_up_date}</td>
                       <td>{item.drop_off_date}</td>
                       <td>{item.pick_up_city}</td>
                       <td>{item.return_city}</td>
-                      <td><button type="button" id={item.car_id} onClick={((e) => { handleClick(e); })}>Car details</button></td>
+                      <td><button type="button" className={styles.reserveBtn} id={item.car_id} onClick={((e) => { handleClick(e); })}>Car details</button></td>
                     </tr>
                   ))}
                 </tbody>
