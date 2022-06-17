@@ -8,46 +8,47 @@
   font-weight: bolder;
 }
 
-.reservations{
+.reservations {
   width: 70%;
   margin: 8px auto;
   padding: 10px;
 }
 
-.tableSucess, thead{
+.tableSucess,
+thead {
   width: 100%;
   height: auto;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 10px;
 }
 
-tr{
+tr {
   width: 100%;
   height: auto;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 15px;
 }
 
-th, td{
+th,
+td {
   border-bottom: 1px solid #ddd;
 }
 
-tr:hover{
-  background-color: #97BF0E;
+tr:hover {
+  background-color: #97bf0e;
   color: white;
 }
 
-.reserveBtn{
+.reserveBtn {
   width: 65%;
   height: auto;
   padding: 5px;
   color: black;
-  border: 1px solid #97BF0E;
+  border: 1px solid #97bf0e;
   border-radius: 5px;
 }
 
-.reserveBtn:hover{
+.reserveBtn:hover {
   border: 1px solid white;
   color: white;
 }
-

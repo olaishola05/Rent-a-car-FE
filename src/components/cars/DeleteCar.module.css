@@ -1,4 +1,4 @@
-.deleteContainer{
+.deleteContainer {
   width: 80%;
   display: grid;
   place-content: start;
@@ -32,6 +32,6 @@ button {
   justify-content: space-between;
   border: none;
   gap: 30px;
-  box-shadow: #97BF0E 0px 0px 3px;
+  box-shadow: #97bf0e 0 0 3px;
   padding: 5px;
 }

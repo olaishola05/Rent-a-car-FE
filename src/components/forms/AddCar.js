@@ -45,145 +45,149 @@ const AddCar = () => {
                 ''
               )}
               <br />
-              <form>
-                <div>
-                  <label className="form-label" htmlFor="make">
-                    Make
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="Enter Make"
-                      onChange={onchange}
-                      id="make"
-                      name="make"
-                    />
-                  </label>
-                </div>
+              <form className={style.addForm}>
+                <div className={style.formSection}>
+                  <div>
+                    <label className="form-label" htmlFor="make">
+                      Make
+                      <input
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter Make"
+                        onChange={onchange}
+                        id="make"
+                        name="make"
+                      />
+                    </label>
+                  </div>
 
-                <div>
-                  <label className="form-label" htmlFor="model">
-                    Model
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="Enter model"
-                      onChange={onchange}
-                      id="model"
-                      name="model"
-                    />
-                  </label>
-                </div>
+                  <div>
+                    <label className="form-label" htmlFor="model">
+                      Model
+                      <input
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter model"
+                        onChange={onchange}
+                        id="model"
+                        name="model"
+                      />
+                    </label>
+                  </div>
 
-                <div>
-                  <label className="form-label" htmlFor="image">
-                    Image
-                    <input
-                      className="form-control"
-                      type="url"
-                      onChange={onchange}
-                      id="image"
-                      name="image"
-                      placeholder="https://example.com"
-                      pattern="https://.*"
-                      size="30"
-                      required
-                    />
-                  </label>
-                </div>
+                  <div>
+                    <label className="form-label" htmlFor="image">
+                      Image
+                      <input
+                        className="form-control"
+                        type="url"
+                        onChange={onchange}
+                        id="image"
+                        name="image"
+                        placeholder="https://example.com"
+                        pattern="https://.*"
+                        size="30"
+                        required
+                      />
+                    </label>
+                  </div>
 
-                <div>
-                  <label className="form-label" htmlFor="color">
-                    Color
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="Enter a color"
-                      onChange={onchange}
-                      id="color"
-                      name="color"
-                    />
-                  </label>
+                  <div>
+                    <label className="form-label" htmlFor="color">
+                      Color
+                      <input
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter a color"
+                        onChange={onchange}
+                        id="color"
+                        name="color"
+                      />
+                    </label>
+                  </div>
                 </div>
+                <div className={style.formSection}>
+                  <div>
+                    <label className="form-label" htmlFor="year">
+                      year
+                      <input
+                        className="form-control"
+                        type="date"
+                        onChange={onchange}
+                        id="year"
+                        name="year"
+                      />
+                    </label>
+                  </div>
 
-                <div>
-                  <label className="form-label" htmlFor="year">
-                    year
-                    <input
-                      className="form-control"
-                      type="date"
-                      onChange={onchange}
-                      id="year"
-                      name="year"
-                    />
-                  </label>
+                  <div>
+                    <label className="form-label" htmlFor="engine">
+                      Engine
+                      <input
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter engine"
+                        onChange={onchange}
+                        id="engine"
+                        name="engine"
+                      />
+                    </label>
+                  </div>
+
+                  <div>
+                    <label className="form-label" htmlFor="seat">
+                      Seat
+                      <input
+                        className="form-control"
+                        type="number"
+                        onChange={onchange}
+                        id="seat"
+                        name="seat"
+                      />
+                    </label>
+                  </div>
+
+                  <div>
+                    <label className="form-label" htmlFor="aircon">
+                      Aircon
+                      <input
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter true or false"
+                        onChange={onchange}
+                        id="aircon"
+                        name="aircon"
+                      />
+                    </label>
+                  </div>
                 </div>
+                <div className={style.formBottom}>
+                  <div>
+                    <label className="form-label" htmlFor="price">
+                      Price
+                      <input
+                        className="form-control"
+                        type="number"
+                        onChange={onchange}
+                        id="price"
+                        name="price"
+                      />
+                    </label>
+                  </div>
 
-                <div>
-                  <label className="form-label" htmlFor="engine">
-                    Engine
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="Enter engine"
-                      onChange={onchange}
-                      id="engine"
-                      name="engine"
-                    />
-                  </label>
-                </div>
-
-                <div>
-                  <label className="form-label" htmlFor="seat">
-                    Seat
-                    <input
-                      className="form-control"
-                      type="number"
-                      onChange={onchange}
-                      id="seat"
-                      name="seat"
-                    />
-                  </label>
-                </div>
-
-                <div>
-                  <label className="form-label" htmlFor="aircon">
-                    Aircon
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="Enter true or false"
-                      onChange={onchange}
-                      id="aircon"
-                      name="aircon"
-                    />
-                  </label>
-                </div>
-
-                <div>
-                  <label className="form-label" htmlFor="price">
-                    Price
-                    <input
-                      className="form-control"
-                      type="number"
-                      onChange={onchange}
-                      id="price"
-                      name="price"
-                    />
-                  </label>
-                </div>
-
-                <div>
-                  <label className="form-label" htmlFor="description">
-                    Description
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="Enter description"
-                      onChange={onchange}
-                      id="description"
-                      name="description"
-                    />
-                  </label>
+                  <div>
+                    <label className="form-label" htmlFor="description">
+                      Description
+                      <input
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter description"
+                        onChange={onchange}
+                        id="description"
+                        name="description"
+                      />
+                    </label>
+                  </div>
                 </div>
 
                 <button

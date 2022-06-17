@@ -16,7 +16,7 @@ export const postReservationToApi = (data) => (dispatch) => {
     },
     body: JSON.stringify({ reservation: data }),
   })
-    .catch((err) => console.log(err))
+    .catch((err) => err)
     .then((response) => response.json());
   dispatch(postReservation());
 };
