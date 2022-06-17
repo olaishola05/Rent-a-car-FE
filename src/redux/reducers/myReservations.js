@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 const FETCH_MY_RESERVATIONS = 'FETCH_MY_RESERVATIONS';
-
 const initialState = [];
 
 const getMyResevations = (payload) => ({
