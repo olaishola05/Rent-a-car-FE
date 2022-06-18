@@ -1,5 +1,5 @@
 export const AddCarToApi = (carData) => (dispatch) => {
-  fetch('http://127.0.0.1:3001/api/v1/cars', {
+  fetch('https://rent-a-car-brytebee.herokuapp.com/api/v1/cars', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

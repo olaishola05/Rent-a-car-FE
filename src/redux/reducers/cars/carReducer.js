@@ -1,5 +1,5 @@
 const DISPLAY_CAR = 'RENT_A_CAR_FE/CARS/DISPLAY_CAR';
-const URL = 'http://localhost:3001/api/v1';
+const URL = 'https://rent-a-car-brytebee.herokuapp.com/api/v1';
 
 const displayCar = (payload) => ({
   type: DISPLAY_CAR,
