@@ -38,7 +38,7 @@ Internet connection and basic computing skills.
 1. On the cmd run `cd Rent-a-car-FE`
 2. Run `npm test`
 
-## Author
+## Authors
 
 👤 **Atsighi Bright**
 
