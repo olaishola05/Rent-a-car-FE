@@ -8,7 +8,7 @@ It is built as a requirement for the Microverse Final Capstone.
 
 ## Demo
 
-[Coming soon!](https://livedemo.com/)
+[Coming soon!](https://rent-a-car-fe.netlify.app/)
 
 ![demo-image](public/image.png)
 
