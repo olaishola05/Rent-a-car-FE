@@ -1,5 +1,5 @@
 export const registerUserToApi = (userData) => (dispatch) => {
-  fetch('https://dashboard.heroku.com/apps/rent-a-car-brytebee/api/v1/users', {
+  fetch('https://rent-a-car-brytebee.herokuapp.com/api/v1/users', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -24,17 +24,15 @@ export const registerUserToApi = (userData) => (dispatch) => {
 };
 
 export const logUserToApi = (userData) => (dispatch) => {
-  fetch(
-    'https://dashboard.heroku.com/apps/rent-a-car-brytebee/api/v1/auth/login',
-    {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({ user: userData }),
+  // fetch('https://rent-a-car-brytebee/api/v1/auth/login', {
+  fetch('https://rent-a-car-brytebee.herokuapp.com/api/v1/auth/login', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      Accept: 'application/json',
     },
-  )
+    body: JSON.stringify({ user: userData }),
+  })
     .then((resp) => resp.json())
     .then((data) => {
       if (data.error) {
