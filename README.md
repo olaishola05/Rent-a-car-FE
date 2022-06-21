@@ -8,7 +8,7 @@ It is built as a requirement for the Microverse Final Capstone.
 
 ## Demo
 
-[Coming soon!](https://livedemo.com/)
+[Coming soon!](https://rent-a-car-fe.netlify.app/)
 
 ![demo-image](public/image.png)
 
@@ -38,7 +38,7 @@ Internet connection and basic computing skills.
 1. On the cmd run `cd Rent-a-car-FE`
 2. Run `npm test`
 
-## Author
+## Authors
 
 👤 **Atsighi Bright**
 

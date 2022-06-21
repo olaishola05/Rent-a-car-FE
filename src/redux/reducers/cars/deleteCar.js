@@ -1,5 +1,6 @@
 const DELETE_CAR = 'RENT_A_CAR/REDUX/DELETE_CAR';
-const baseUrl = 'http://127.0.0.1:3001/api/v1/cars';
+// const baseUrl = 'http://127.0.0.1:3001/api/v1/cars';
+const baseUrl = 'https://rent-a-car-brytebee.herokuapp.com/api/v1/cars';
 
 export const deleteCar = (id) => ({
   type: DELETE_CAR,

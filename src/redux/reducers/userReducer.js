@@ -1,5 +1,5 @@
 export const registerUserToApi = (userData) => (dispatch) => {
-  fetch('http://127.0.0.1:3001/api/v1/users', {
+  fetch('https://rent-a-car-brytebee.herokuapp.com/api/v1/users', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -24,7 +24,8 @@ export const registerUserToApi = (userData) => (dispatch) => {
 };
 
 export const logUserToApi = (userData) => (dispatch) => {
-  fetch('http://127.0.0.1:3001/api/v1/auth/login', {
+  // fetch('https://rent-a-car-brytebee/api/v1/auth/login', {
+  fetch('https://rent-a-car-brytebee.herokuapp.com/api/v1/auth/login', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -48,7 +49,10 @@ export const logUserToApi = (userData) => (dispatch) => {
     });
 };
 
-const userReducer = (state = { user: null, isLoggedIn: false, error: null }, action) => {
+const userReducer = (
+  state = { user: null, isLoggedIn: false, error: null },
+  action,
+) => {
   switch (action.type) {
     case 'SIGNUP_SUCCESS':
     case 'LOGIN_SUCCESS':
@@ -60,7 +64,10 @@ const userReducer = (state = { user: null, isLoggedIn: false, error: null }, act
 
     case 'LOGGED_OUT':
       return {
-        ...state, user: null, isLoggedIn: false, error: null,
+        ...state,
+        user: null,
+        isLoggedIn: false,
+        error: null,
       };
 
     default:
